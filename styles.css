@@ -117,7 +117,8 @@ body {
 /* Products Section */
 .products-section {
     padding: 60px 0;
-    background-color: var(--bg-light);
+    background: url('images/fondo-1.jpg');
+    background-size: cover;
 }
 
 .products-grid {
@@ -258,23 +259,19 @@ body {
 /* Features Section */
 .features-section {
     padding: 60px 0;
-    background-color: var(--white);
+    background: url('images/fondo-3.jpg') no-repeat top center;
+    padding: 3em 1em;
 }
 
 .feature-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 60px;
-}
-
-.feature-row.reverse {
-    grid-template-columns: 1fr 1fr;
-}
-
-.feature-row.reverse .feature-image {
-    order: -1;
+    width: 40%;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 14px;
+    border: 2px solid white;
 }
 
 .feature-content h2 {
@@ -320,12 +317,6 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: center;
-}
-
-.about-image img {
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .about-text {
@@ -666,13 +657,8 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .feature-row,
-    .feature-row.reverse {
-        grid-template-columns: 1fr;
-    }
-
-    .feature-row.reverse .feature-image {
-        order: 0;
+    .feature-row {
+        width: 100%;
     }
 
     .about-content {
